@@ -7,7 +7,6 @@ require "pry"
 class BubbleSortTest < Minitest::Test
 
 
-  
   def test_new_sort
     sort_1=BubbleSort.new(["d", "b", "a", "c"])
     tester=["a", "b", "c", "d"]
