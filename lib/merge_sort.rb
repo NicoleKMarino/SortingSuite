@@ -6,7 +6,10 @@ class MergeSort
   end
 
   def sort(list)
-    if list.length == 1
+    if list.empty?
+      puts "This list is empty, not sortable!"
+      return true
+    elsif list.length == 1
       return list
     else
       mid= (list.length / 2) - 1

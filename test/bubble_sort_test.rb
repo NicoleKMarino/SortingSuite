@@ -7,7 +7,7 @@ require "pry"
 class BubbleSortTest < Minitest::Test
 
 
-
+  
   def test_new_sort
     sort_1=BubbleSort.new(["d", "b", "a", "c"])
     tester=["a", "b", "c", "d"]
@@ -23,6 +23,11 @@ class BubbleSortTest < Minitest::Test
   def test_one_element_sort
     sort_3 = BubbleSort.new([5])
     assert_equal [5], sort_3.sort
+  end
+
+  def test_edge_case
+    sort_4 = BubbleSort.new([])
+    assert_equal true, sort_4.sort
   end
 
 

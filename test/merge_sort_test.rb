@@ -6,7 +6,6 @@ require "pry"
 
 class MergeSortTest < Minitest::Test
 
-
   def test_new_sort
     sort_1 = MergeSort.new(["d", "b", "a", "c"])
     tester= ["a", "b", "c", "d"]
@@ -24,5 +23,9 @@ class MergeSortTest < Minitest::Test
     assert_equal [5], sort_3.sort(sort_3.list)
   end
 
+  def test_edge_case
+    sort_4 = MergeSort.new([])
+    assert_equal true, sort_4.sort(sort_4.list)
+  end
 
 end

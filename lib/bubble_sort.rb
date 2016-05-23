@@ -6,7 +6,10 @@ class BubbleSort
 
   def sort
     list=@list
-    if list.length == 1
+    if list.empty?
+      puts "This list is empty, not sortable!"
+      return true
+    elsif list.length == 1
       puts "This list is one element, therfor it is already sorted"
       return list
     else

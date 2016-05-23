@@ -26,4 +26,9 @@ class BubbleSortTest < Minitest::Test
     assert_equal [5], sort_3.sort
   end
 
+  def test_edge_case
+    sort_4 = InsertionSort.new([])
+    assert_equal true, sort_4.sort
+  end
+
 end
